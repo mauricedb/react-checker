@@ -3,23 +3,22 @@ import ReactDOM from "react-dom";
 
 class Clock extends React.Component {
   state = {
-    time: ''
-  }
+    time: ""
+  };
 
   componentDidMount() {
-    setInterval(() => this.setState({
-        time: new Date().toLocaleTimeString()
-    }), 1000)
+    setInterval(
+      () =>
+        this.setState({
+          time: new Date().toLocaleTimeString()
+        }),
+      1000
+    );
   }
 
   render() {
-    return (
-      <span>Time: {this.state.time}</span>
-    );
+    return <span>Time: {this.state.time}</span>;
   }
 }
 
-ReactDOM.render(
-  <Clock />,
-  document.getElementById("app")
-);
+ReactDOM.render(<Clock />, document.getElementById("app"));

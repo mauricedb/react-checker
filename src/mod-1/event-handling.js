@@ -2,17 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 class Greeter extends React.Component {
+  greet = () => {
+    alert("Hello " + this.props.firstName);
+  }
   render() {
     return (
-      <span>
-        Hello {this.props.firstName} 
-        {this.props.lastName}
+      <span> 
+        <button onClick={this.greet}>
+          Greet
+        </button>
       </span>
     );
   }
-}
+};
 
 ReactDOM.render(
-  <Greeter firstName="Maurice" lastName="de Beijer" />,
+  <Greeter firstName="Maurice" />,
   document.getElementById("app")
 );

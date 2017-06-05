@@ -1,3 +1,4 @@
+
 var OtherComponent = function() {
   return (
     <span>Hello from React</span>
